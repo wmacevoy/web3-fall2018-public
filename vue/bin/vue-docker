@@ -1,0 +1,3 @@
+#!/bin/bash
+docker run -i -a stdin -a stdout -p8080:8080 -v "$PWD":/home -w /home vue:latest "$@"
+
