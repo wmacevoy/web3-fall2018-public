@@ -29,8 +29,9 @@ cd ..
 . context
 vue create hello-world
 cd hello-world
-npm install --save vue-router
-
+/bin/rm -rf .git
+vue add router
+yarn serve
 
 
 
