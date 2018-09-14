@@ -22,3 +22,6 @@ After this, the dev tools,
 runs a comand within the vue
 
 
+Start mongo:
+
+docker-compose -f stack.yml up
