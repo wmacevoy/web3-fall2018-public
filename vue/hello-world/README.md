@@ -1,5 +1,4 @@
 # hello-world
-
 ## Project setup
 ```
 yarn install
@@ -7,7 +6,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
@@ -37,6 +36,12 @@ vue add router
 yarn serve
 ```
 
+### Docker-compose
 
+Start everything (in this directory):
+
+```bash
+docker-compose -f stack.yml up
+```
 
 
