@@ -3,7 +3,7 @@ RUN yarn global add \
         babel-core \
         babel-loader \
         babel-preset-react \
-        babel-preset-es2015
+        babel-preset-es2015 \
         nodemon \
         vue \
         @vue/cli \
