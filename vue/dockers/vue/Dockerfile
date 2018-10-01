@@ -1,14 +1,9 @@
 FROM node:latest
 RUN yarn global add \
-        babel-core \
-        babel-loader \
-        babel-preset-react \
-        babel-preset-es2015 \
+        babel-cli \
         nodemon \
-        vue \
-        @vue/cli \
-        @vue/cli-init \
-        @vue/cli-service-global
+        vue-cli \
+        webpack
 
 
 RUN yarn global add \
