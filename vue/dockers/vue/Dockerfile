@@ -1,12 +1,12 @@
 FROM node:latest
-RUN yarn global add \
+RUN npm install -g \
         babel-cli \
         nodemon \
         vue-cli \
         webpack
 
 
-RUN yarn global add \
+RUN npm install -g \
         axios \
         body-parse \
         mongodb \
