@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for share in home courses
+do
+  sudo umount "$HOME/$share"
+done

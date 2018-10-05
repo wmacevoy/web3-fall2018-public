@@ -1,0 +1,5 @@
+#!/bin/bash
+if [ ! -r "$HOME/wmacevoy/.ssh/id_rsa" ] ; then
+    "$HOME/bin/mount-wmacevoy"
+fi
+ssh -i "$HOME/wmacevoy/.ssh/id_rsa" "$@"

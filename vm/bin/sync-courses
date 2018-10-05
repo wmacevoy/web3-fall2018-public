@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ ! mount | grep $HOME/courses ]
+then
+    $HOME/bin/mount-shares
+fi
+
+if [ ! mount | grep $HOME/courses ]
+then
+   echo "mount share failed."
+   exit 1
+fi
+
+rsync "$HOME/courses/" "$HOME/rsync-courses"
+
+   
+
+	    
+
+
+	

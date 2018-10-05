@@ -1,0 +1,32 @@
+#!/bin/bash
+
+user="$1"
+uid=$(id -u)
+gid=$(id -g)
+
+if [ "$user" == "" ] ; then
+     echo "Must provide a cmu user name."
+     exit 1
+fi
+
+if [ ! -x "/sbin/mount.cifs" ] ; then
+   sudo apt install -y cifs-utils
+fi
+
+if [ ! -x "/sbin/mount.cifs" ] ; then
+   echo "CIFS components missing." 1>&2
+   exit 1
+fi
+
+for share in home courses
+do
+  if [ ! -d "$HOME/$share" ] ; then
+     mkdir -p "$HOME/$share"
+  fi
+  if [ ! -d "$HOME/$share" ] ; then
+     echo "$HOME/$share is not a directory." 1>&2
+     exit 1
+  fi
+  mkdir -p "$HOME/$share"
+  sudo mount -t cifs //homefs.coloradomesa.edu/$share "$HOME/$share" -o "username=$user,uid=$uid,gid=$gid"
+done
