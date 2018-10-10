@@ -44,5 +44,7 @@ open localhost:8080 to see Hello!
 
 make a snapshot
 
+```bash
 sudo apt-get install -y mongodb
 sudo npm install -g mongo-express
+bash
