@@ -57,6 +57,7 @@ mongo
 In mongo shell:
 ```javascript
 use admin
+db.dropAllUsers({}) // if you want to do this!
 db.createUser(
   {
     user: "<adminuser>",
@@ -71,3 +72,6 @@ mongo -u '<adminuser>' -p '<adminpass>' --authenticationDatabase 'admin'
 ```
 
 
+```bash
+mongo-express -a -u '<adminuser>' -p '<adminpass>'
+```
