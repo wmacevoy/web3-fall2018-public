@@ -62,12 +62,12 @@ db.createUser(
     user: "admin",
     pwd: "justasbad",
     roles: ["root"]
-  }db.
+  }
 )
 ```
 ctrl-d to exit shell.  `service mongodb restart` to restart.
 ```bash
 mongo -u '<adminuser>' -p '<adminpass>' --authenticationDatabase 'admin'
 ```
-
+cd /usr
 
