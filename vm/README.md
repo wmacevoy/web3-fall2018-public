@@ -47,4 +47,27 @@ make a snapshot
 ```bash
 sudo apt-get install -y mongodb
 sudo npm install -g mongo-express
-bash
+```
+
+Set admin password:
+
+```bash
+mongo
+```
+In mongo shell:
+```javascript
+use admin
+db.createUser(
+  {
+    user: "admin",
+    pwd: "justasbad",
+    roles: ["root"]
+  }db.
+)
+```
+ctrl-d to exit shell.  `service mongodb restart` to restart.
+```bash
+mongo -u '<adminuser>' -p '<adminpass>' --authenticationDatabase 'admin'
+```
+
+
