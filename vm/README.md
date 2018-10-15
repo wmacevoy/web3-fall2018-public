@@ -59,8 +59,8 @@ In mongo shell:
 use admin
 db.createUser(
   {
-    user: "admin",
-    pwd: "justasbad",
+    user: "<adminuser>",
+    pwd: "<adminpass>",
     roles: ["root"]
   }
 )
@@ -69,5 +69,5 @@ ctrl-d to exit shell.  `service mongodb restart` to restart.
 ```bash
 mongo -u '<adminuser>' -p '<adminpass>' --authenticationDatabase 'admin'
 ```
-cd /usr
+
 
