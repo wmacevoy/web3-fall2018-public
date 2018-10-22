@@ -75,3 +75,19 @@ mongo -u '<adminuser>' -p '<adminpass>' --authenticationDatabase 'admin'
 ```bash
 mongo-express -a -u '<adminuser>' -p '<adminpass>'
 ```
+
+Intialize new Vue project (yes to all):
+```bash
+mkdir hello2
+cd hello2
+sudo npm install -g @vue/cli-init
+vue init webpack .
+sudo chown -R $USER:$(id -gn $USER) $HOME/.config
+npm install --save express body-parser mongoose
+npm audit fix
+```
+
+Working on:
+
+https://medium.com/coding-vault/starter-template-for-a-mevn-mongodb-expressjs-vuejs-v2-nodejs-stack-application-part-1-62820aeb2a06
+
