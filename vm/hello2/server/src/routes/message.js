@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
+var Message = require('../models/Message.js');
 
-/* GET home page. */
+/* GET ALL MESSAGES */
 router.get('/', function(req, res, next) {
-  res.send('Express RESTful API');
+  Message.find(function (err, ans) {
+    if (err) return next(err);
+    res.json(ans);
+  });
 });
 
 module.exports = router;

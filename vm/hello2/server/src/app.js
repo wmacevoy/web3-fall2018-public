@@ -6,11 +6,20 @@ const cors = require('cors')
 const morgan = require('morgan')
 const app = express()
 const mongo = require('mongodb')
-const MongoClient = mongo.MongoClient;
+const mongoose = require('mongoose')
+const promise = require('bluebird')
 const message = require('./routes/message')
 
-const url = "mongodb://admin:justasbad@localhost:27017/";
+const url = "mongodb://admin:justasbad@localhost:27017/"
+
+mongoose.connect(url, { useNewUrlParser: true, promiseLibrary: promise })
+  .then(() =>  console.log('connection succesful'))
+  .catch((err) => console.error(err));
+
 /*
+
+const MongoClient = mongo.MongoClient
+
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("hellodb");
