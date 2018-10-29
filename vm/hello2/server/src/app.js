@@ -8,9 +8,8 @@ const app = express()
 const mongo = require('mongodb')
 const mongoose = require('mongoose')
 const promise = require('bluebird')
+const url = "mongodb://admin:justasbad@localhost:27017/hellodb?authSource=admin&w=1"
 const message = require('./routes/message')
-
-const url = "mongodb://admin:justasbad@localhost:27017/"
 
 mongoose.connect(url, { useNewUrlParser: true, promiseLibrary: promise })
   .then(() =>  console.log('connection succesful'))
