@@ -1,3 +1,5 @@
+const config = require('./config/main')
+
 const express = require('express')
 const path = require('path')
 const logger = require('morgan')
@@ -8,7 +10,7 @@ const app = express()
 const mongo = require('mongodb')
 const mongoose = require('mongoose')
 const promise = require('bluebird')
-const url = "mongodb://admin:justasbad@localhost:27017/hellodb?authSource=admin&w=1"
+const url = `mongodb://${config.db.user}:${config.db.pass}@${config.db.host}:${config.db.port}/${config.db.name}?authSource=admin&w=1`
 const message = require('./routes/message')
 
 mongoose.connect(url, { useNewUrlParser: true, promiseLibrary: promise })
