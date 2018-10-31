@@ -35,3 +35,7 @@ API message examples:
 curl -i -H "Accept: application/json" localhost:3000/message
 curl -i -X POST -H "Content-Type: application/json" -d '{"lang": "it", "message":"ciao" }' http://localhost:3000/message
 ```
+
+Config best practices:
+
+https://codingsans.com/blog/node-config-best-practices
