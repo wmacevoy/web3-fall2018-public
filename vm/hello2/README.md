@@ -28,3 +28,10 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+API message examples:
+```bash
+curl -i -H "Accept: application/json" localhost:3000/message
+curl -i -X POST -H "Content-Type: application/json" -d '{"lang": "it", "message":"ciao" }' http://localhost:3000/message
+```
